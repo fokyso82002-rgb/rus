@@ -1,0 +1,23 @@
+# The fixed task. Do not edit it: the jury runs exactly these settings.
+# harness/run_task.py fills in data.train, training.seed and output for each run.
+base: Qwen/Qwen2.5-1.5B-Instruct
+task: sft
+data:
+  train: ./data/train.jsonl
+  format: alpaca
+  val_split: 0.0
+  max_length: 512
+training:
+  epochs: 1
+  lr: 2.0e-4
+  batch_size: 4
+  gradient_accumulation_steps: 1
+  seed: 1
+  logging_steps: 1
+  save_steps: 1000
+  lora:
+    r: 16
+    alpha: 32
+    target_modules: auto
+  quantization: 4bit
+output: ./runs/out

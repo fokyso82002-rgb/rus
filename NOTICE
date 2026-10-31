@@ -1,0 +1,14 @@
+Soup Kernel Challenge starter kit
+Copyright 2026 Makazhan Alpamys and the Soup contributors
+
+This kit is licensed under the Apache License, Version 2.0 (see LICENSE).
+
+tests/test_config.py, tests/test_formats.py, tests/test_loader.py, tests/test_trainer_init.py and
+tests/test_callback.py are copied from Soup v0.77.0 (https://github.com/MakazhanAlpamys/Soup,
+Apache-2.0); the only change is a two-line header naming their source. tests/conftest.py is
+adapted from Soup v0.77.0's tests/conftest.py: a subset of its fixtures plus a hook that applies
+the solution.
+
+Task data: AmanMussa/kazakh-instruction-v2 on Hugging Face (MIT on its card), a Kazakh translation
+of Stanford Alpaca (tatsu-lab/alpaca, CC BY-NC 4.0). It is downloaded at run time, not shipped here.
+Model: Qwen/Qwen2.5-1.5B-Instruct on Hugging Face, Apache-2.0 license.
